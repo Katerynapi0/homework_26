@@ -7,6 +7,9 @@
 let passwordField = document.getElementById('passwordField');
 //div
 let infoText = document.getElementById('infoText');
+
+infoText.style.display = 'none';
+
 //функії для поведінки подій 
 let handleMouseOver = function() {
     infoText.style.display = 'block';
@@ -16,5 +19,5 @@ let handleMouseOut = function() {
     infoText.style.display = 'none';
 };
 //події
-passwordField.addEventListener('click', handleMouseOver);
-passwordField.addEventListener('mouseout', handleMouseOut);
+passwordField.addEventListener('focus', handleMouseOver);
+passwordField.addEventListener('blur', handleMouseOut);
